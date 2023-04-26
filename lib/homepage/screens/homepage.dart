@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:blink/pages.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/avatar_widget.dart';
@@ -99,21 +100,25 @@ class HomePage extends StatelessWidget {
 
           //Floating action button on Scaffold
           onPressed: () {
-            //code to execute on button press
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const TextToSignPage()),
+            );
           },
           child: Icon(
-            Icons.explore_rounded,
+            Icons.sign_language,
             size: 30,
           ), //icon inside button
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        //floatingActionButtonLocation: FloatingActionButtonLocation.startDocked,
         bottomNavigationBar: BottomAppBar(
           //bottom navigation bar on scaffold
-          height: 60,
-          color: Color.fromRGBO(51, 53, 123, 1),
+          height: 35,
+          elevation: 0,
+          color: Color.fromRGBO(255, 255, 255, 1),
           shape: CircularNotchedRectangle(), //shape of notch
           notchMargin:
-              5, //notche margin between floating button and bottom appbar
+              2, //notche margin between floating button and bottom appbar
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: Row(
@@ -122,41 +127,41 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                IconButton(
-                  icon: const Icon(
-                    Icons.home_rounded,
-                    size: 35,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: const Icon(
-                    Icons.local_library_rounded,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-                  onPressed: () {},
-                ),
-                SizedBox(
-                  width: 40,
-                ),
-                IconButton(
-                  icon: const Icon(
-                    Icons.book_rounded,
-                    color: Colors.white,
-                    size: 34,
-                  ),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: const Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-                  onPressed: () {},
-                ),
+                // IconButton(
+                //   icon: const Icon(
+                //     Icons.home_rounded,
+                //     size: 35,
+                //     color: Colors.white,
+                //   ),
+                //   onPressed: () {},
+                // ),
+                // IconButton(
+                //   icon: const Icon(
+                //     Icons.local_library_rounded,
+                //     color: Colors.white,
+                //     size: 35,
+                //   ),
+                //   onPressed: () {},
+                // ),
+                // SizedBox(
+                //   width: 40,
+                // ),
+                // IconButton(
+                //   icon: const Icon(
+                //     Icons.book_rounded,
+                //     color: Colors.white,
+                //     size: 34,
+                //   ),
+                //   onPressed: () {},
+                // ),
+                // IconButton(
+                //   icon: const Icon(
+                //     Icons.settings,
+                //     color: Colors.white,
+                //     size: 35,
+                //   ),
+                //   onPressed: () {},
+                // ),
               ],
             ),
           ),
