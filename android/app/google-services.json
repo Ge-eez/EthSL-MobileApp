@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674361485039",
+    "project_id": "blink-ethsl",
+    "storage_bucket": "blink-ethsl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674361485039:android:c3a28010cf1b4cdd7fdd1a",
+        "android_client_info": {
+          "package_name": "com.example.blink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674361485039-evdknmfdcssqtcn9r0c2f4ubr9j6q232.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAIlwrZQBPKLlWvvrE_j2bg5VrTINVWcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674361485039-evdknmfdcssqtcn9r0c2f4ubr9j6q232.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
