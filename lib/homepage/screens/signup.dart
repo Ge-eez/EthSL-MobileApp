@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const SignUp());
+
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
