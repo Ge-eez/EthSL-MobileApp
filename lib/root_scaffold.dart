@@ -1,3 +1,5 @@
+import 'package:blink/pose_detector_view.dart';
+import 'package:blink/practice/practice_page.dart';
 import 'package:flutter/material.dart';
 import 'pages.dart';
 
@@ -11,8 +13,8 @@ class RootScaffold extends StatefulWidget {
 class _RootScaffoldState extends State<RootScaffold> {
   final List<Widget> _screens = [
     HomePage(),
-    Scaffold(),
-    Scaffold(),
+    LessonsPage(),
+    PracticePage(),
     Scaffold(),
     Scaffold(),
   ];
