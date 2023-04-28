@@ -38,6 +38,12 @@ dependencies:
   model_viewer_plus: ^1.5.0
   animated_text_kit: ^4.2.2
   firebase_core: ^2.9.0
+  camera: ^0.10.4
+  google_mlkit_commons: ^0.3.0
+  image_picker: ^0.8.7+4
+  google_mlkit_pose_detection: ^0.6.0
+  tflite_flutter: ^0.9.4
+  tflite_flutter_helper: ^0.2.1
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +73,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - assets/models/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
