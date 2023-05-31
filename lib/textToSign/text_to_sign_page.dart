@@ -1,3 +1,4 @@
+import 'package:blink/textToSign/translate_avatar.dart';
 import 'package:flutter/material.dart';
 
 import '../homepage/widgets/avatar_widget.dart';
@@ -10,6 +11,13 @@ class TextToSignPage extends StatefulWidget {
 }
 
 class _TextToSignPageState extends State<TextToSignPage> {
+  String animations = '["Lift"]';
+  callback(newValue) {
+    setState(() {
+      animations = newValue;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +43,7 @@ class _TextToSignPageState extends State<TextToSignPage> {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.8,
-            child: GreetingAvatar(),
+            child: TranslateAvatar(key: UniqueKey(), lis: animations),
           ),
           Positioned(
             bottom: 10,
@@ -43,7 +51,9 @@ class _TextToSignPageState extends State<TextToSignPage> {
               padding: const EdgeInsets.fromLTRB(8.0, 8, 8, 8),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                child: inputFeild(),
+                child: inputFeild(
+                  callback: callback,
+                ),
               ),
             ),
           ),
@@ -54,7 +64,8 @@ class _TextToSignPageState extends State<TextToSignPage> {
 }
 
 class inputFeild extends StatefulWidget {
-  const inputFeild({super.key});
+  Function callback;
+  inputFeild({super.key, required this.callback});
 
   @override
   State<inputFeild> createState() => _inputFeildState();
@@ -103,6 +114,7 @@ class _inputFeildState extends State<inputFeild> {
           InkWell(
             onTap: () {
               print("hello");
+              widget.callback('["Ha","Hu","He"]');
             },
             child: Container(
               padding: const EdgeInsets.fromLTRB(15.0, 15, 12, 15),

@@ -1,6 +1,6 @@
-import 'package:blink/pose_detector_view.dart';
 import 'package:blink/practice/practice_page.dart';
 import 'package:flutter/material.dart';
+import 'mp_web_view/test_wv.dart';
 import 'pages.dart';
 
 class RootScaffold extends StatefulWidget {
