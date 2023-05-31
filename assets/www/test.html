@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+  </head>
+  <body>
+    <h1>Let's plot random numbers</h1>
+    <div id="plot"></div>
+    <script type="text/javascript">
+        var jx = [[1,1], [2,2], [3,3], [4,4], [5,5]];
+        async function main(){
+          let pyodide = await loadPyodide();
+          await pyodide.loadPackage("micropip");
+          const micropip = pyodide.pyimport("micropip");
+          await micropip.install('https://raw.githack.com/tewodros18/todo/master/fastdtw-0.3.4-py3-none-any.whl')
+          await micropip.install("scipy")
+          pyodide.runPython(`
+              import numpy as np
+              from js import jx
+              from fastdtw import fastdtw
+              x = np.array(jx.to_py())
+              y = np.array([[2,2], [3,3], [4,4]])
+              distance, path = fastdtw(x, y)
+          `);
+          console.log(pyodide.globals.get("distance"));
+        }
+        main();
+        //console.log(pyodide.globals.get('distance').toJs());
+    </script>
+    
+  </body>
+</html>

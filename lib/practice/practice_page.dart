@@ -1,5 +1,6 @@
-import 'package:blink/pose_detector_view.dart';
 import 'package:flutter/material.dart';
+
+import '../mp_web_view/test_wv.dart';
 
 class PracticePage extends StatefulWidget {
   const PracticePage({super.key});
@@ -20,7 +21,7 @@ class _PracticePageState extends State<PracticePage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PoseDetectorView()),
+              MaterialPageRoute(builder: (context) => WebViewApp()),
             );
           },
           child: Text("Press"),
