@@ -41,15 +41,13 @@ dependencies:
   camera: ^0.10.4
   google_mlkit_commons: ^0.3.0
   image_picker: ^0.8.7+4
-  google_mlkit_pose_detection: ^0.6.0
-  tflite_flutter: ^0.9.4
-  tflite_flutter_helper: ^0.2.1
   webview_flutter: any
   permission_handler: ^10.2.0
   flutter_inappwebview: ^5.7.2+3
   ml_dataframe: ^1.6.0
   matrix2d: ^1.0.4
   http: ^0.13.6
+  audioplayers: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +79,7 @@ flutter:
     - assets/
     - assets/www/index.html
     - assets/www/style/style.css
+    - assets/signs/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
