@@ -34,8 +34,10 @@ em {
 }
 
 video {
+  width: 1500px;
+  height: 3000px;
+  object-fit: fill;
   clear: both;
-  display: block;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -66,7 +68,7 @@ footer {
 
 .videoView,
 .detectOnClick {
-  zoom: 205%;
+
   position: relative;
   float: left;
   width: 60%;
@@ -94,12 +96,18 @@ footer {
 }
 
 .canvas {
+  width: 1500px;
+  height: 3000px;
+  object-fit: fill;
   z-index: 1;
   position: absolute;
   pointer-events: none;
 }
 
 .output_canvas {
+  width: 1500px;
+  height: 3000px;
+  object-fit: fill;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);

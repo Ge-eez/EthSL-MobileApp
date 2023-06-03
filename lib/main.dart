@@ -5,7 +5,6 @@ import 'firebase_options.dart';
 import 'pages.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-
 List<CameraDescription> cameras = [];
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

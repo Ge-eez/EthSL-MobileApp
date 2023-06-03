@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  tflite_flutter
+  audioplayers_linux
   url_launcher_linux
 )
 

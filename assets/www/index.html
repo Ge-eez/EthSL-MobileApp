@@ -117,11 +117,10 @@ limitations under the License. -->
     let results = undefined;
     console.log(video);
     async function predictWebcam() {
-        canvasElement.style.width = video.videoWidth;
-        ;
-        canvasElement.style.height = video.videoHeight;
-        canvasElement.width = video.videoWidth;
-        canvasElement.height = video.videoHeight;
+        canvasElement.style.width = 1500;
+        canvasElement.style.height = 3000;
+        canvasElement.width = 1500;
+        canvasElement.height = 3000;
         // Now let's start detecting the stream.
         if (runningMode === "IMAGE") {
             runningMode = "VIDEO";
