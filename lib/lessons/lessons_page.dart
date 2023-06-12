@@ -34,7 +34,7 @@ class _LessonsPageState extends State<LessonsPage> {
                             style: DefaultTextStyle.of(context).style,
                             children: const <TextSpan>[
                               TextSpan(
-                                text: "ሰላም ጄን\n",
+                                text: "ሰላም\n",
                                 style: TextStyle(
                                     color: Color.fromRGBO(51, 53, 123, 0.7),
                                     fontSize: 18,

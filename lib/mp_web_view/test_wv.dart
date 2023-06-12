@@ -87,9 +87,10 @@ class _WebViewAppState extends State<WebViewApp> {
                       var response = await http.post(Uri.parse(url),
                           headers: {"Content-Type": "application/json"},
                           body: body);
+
+                      print(response.body);
                       if (response.statusCode == 200) {
-                        if (response.body == "Ne" ||
-                            response.body == curr["letter"]) {
+                        if (response.body == "hu") {
                           await player.play(AssetSource('bell.wav'));
                           setState(() {
                             _isPrediciting = false;
