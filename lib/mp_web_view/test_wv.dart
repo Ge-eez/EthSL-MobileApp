@@ -33,6 +33,19 @@ class _WebViewAppState extends State<WebViewApp> {
     setHint(curr);
   }
 
+  InAppWebViewSettings settings = InAppWebViewSettings(
+    mediaPlaybackRequiresUserGesture: false,
+    allowFileAccessFromFileURLs: true,
+    // Off by default, deprecated for SDK versions >= 30.
+    allowUniversalAccessFromFileURLs: true,
+    allowFileAccess: true,
+    allowContentAccess: true,
+    webViewAssetLoader: WebViewAssetLoader(
+      domain: "my.custom.domain.com",
+      pathHandlers: [AssetsPathHandler(path: '/assets/')],
+    ),
+  );
+
   void setHint(curr) {
     hints.forEach((element) {
       element.forEach((key, value) {
@@ -53,13 +66,15 @@ class _WebViewAppState extends State<WebViewApp> {
       body: Stack(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20)),
             child: InAppWebView(
+              initialSettings: settings,
               initialOptions: InAppWebViewGroupOptions(
                 crossPlatform: InAppWebViewOptions(
                   mediaPlaybackRequiresUserGesture: false,
+                  allowUniversalAccessFromFileURLs: true,
                 ),
               ),
               onWebViewCreated: (InAppWebViewController controller) {
@@ -139,8 +154,13 @@ class _WebViewAppState extends State<WebViewApp> {
                       args;
                       print(args);
                     });
-                _webViewController.loadFile(
-                    assetFilePath: 'assets/www/index.html');
+                // _webViewController.loadFile(
+                //     assetFilePath: 'assets/www/index.html');
+                _webViewController.loadUrl(
+                  urlRequest: URLRequest(
+                      url: WebUri(
+                          "https://my.custom.domain.com/assets/flutter_assets/assets/www/index.html")),
+                );
               },
               androidOnPermissionRequest: (InAppWebViewController controller,
                   String origin, List<String> resources) async {
