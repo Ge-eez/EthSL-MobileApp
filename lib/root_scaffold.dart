@@ -1,5 +1,7 @@
 import 'package:blink/practice/practice_page.dart';
 import 'package:flutter/material.dart';
+import 'challenges/challenges_page.dart';
+import 'glossary/glossary_page.dart';
 import 'mp_web_view/test_wv.dart';
 import 'pages.dart';
 
@@ -15,8 +17,8 @@ class _RootScaffoldState extends State<RootScaffold> {
     HomePage(),
     LessonsPage(),
     PracticePage(),
-    Scaffold(),
-    Scaffold(),
+    ChallengesPage(),
+    GlossaryPage(),
   ];
 
   // final List<IconData> _icons = [Icons.home, Icons.library_music, Icons.person];
@@ -34,7 +36,7 @@ class _RootScaffoldState extends State<RootScaffold> {
         selectedItemColor: Color.fromRGBO(255, 255, 255, 1),
         currentIndex: _selectedIndex,
         iconSize: 30,
-        selectedLabelStyle: TextStyle(
+        selectedLabelStyle: const TextStyle(
           color: Color.fromRGBO(51, 53, 123, 1),
         ),
         unselectedItemColor: Color.fromRGBO(216, 216, 216, 0.651),
@@ -44,28 +46,28 @@ class _RootScaffoldState extends State<RootScaffold> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded),
-            label: "Home",
+            label: "ቤት",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
             //activeIcon: Icon(Icons.home_rounded, color: Colors.red),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_library_rounded),
-            label: "Lessons",
+            label: "ትምህርቶች",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_searching_rounded),
-            label: "Practice",
+            label: "ሙከራ",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.golf_course_sharp),
-            label: "Challenges",
+            label: "ፈተና",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book_rounded),
-            label: "Glossary",
+            label: "መፍቻ",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
         ],

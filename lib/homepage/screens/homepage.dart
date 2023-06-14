@@ -33,17 +33,17 @@ class HomePage extends StatelessWidget {
                             style: DefaultTextStyle.of(context).style,
                             children: const <TextSpan>[
                               TextSpan(
-                                text: "Hi, Jane\n",
+                                text: "ሰላም\n",
                                 style: TextStyle(
                                     color: Color.fromRGBO(51, 53, 123, 0.7),
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
-                                text: "Welcome!\n",
+                                text: "እንኳን ደህና መጡ!\n",
                                 style: TextStyle(
                                   color: Color.fromRGBO(51, 53, 123, 0.7),
-                                  fontSize: 40,
+                                  fontSize: 25,
                                   fontWeight: FontWeight.bold,
                                   overflow: TextOverflow.fade,
                                 ),
