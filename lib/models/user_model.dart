@@ -28,4 +28,15 @@ class UserModel {
     lessonProgress = json['lesson_progress'];
     challengeProgress = json['challenge_progress'];
   }
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'firstName': firstName,
+        'lastName': lastName,
+        'userName': userName,
+        'phoneNumber': phoneNumber,
+        'email': email,
+        'lessonProgress': lessonProgress,
+        'challengeProgress': challengeProgress,
+      };
 }

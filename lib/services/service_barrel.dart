@@ -1,2 +1,3 @@
 export './challenges_reposiotries.dart';
-export './lessons_repositories.dart';
+export './auth_service.dart';
+export './secure_storage_service.dart';

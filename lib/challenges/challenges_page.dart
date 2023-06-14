@@ -43,7 +43,7 @@ class _ChallengesPageState extends State<ChallengesPage> {
                                 style: DefaultTextStyle.of(context).style,
                                 children: const <TextSpan>[
                                   TextSpan(
-                                    text: "            ፈተና ሞክር!",
+                                    text: "            ፈተና ይሞክሩ!",
                                     style: TextStyle(
                                       color: Color.fromRGBO(51, 53, 123, 0.7),
                                       fontSize: 35,
@@ -162,14 +162,14 @@ class _ChallengesPageState extends State<ChallengesPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TakeChallengePage()),
+                                builder: (context) => TakeChallengePage(currentChallenge: challenge,)),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(
                               51, 53, 123, 1), // Background color
                         ),
-                        child: Text("Start"),
+                        child: Text("ይጀምሩ"),
                       ),
                     ),
                   ),

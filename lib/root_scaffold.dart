@@ -46,28 +46,28 @@ class _RootScaffoldState extends State<RootScaffold> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded),
-            label: "Home",
+            label: "ቤት",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
             //activeIcon: Icon(Icons.home_rounded, color: Colors.red),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_library_rounded),
-            label: "Lessons",
+            label: "ትምህርቶች",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_searching_rounded),
-            label: "Practice",
+            label: "ሙከራ",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.golf_course_sharp),
-            label: "Challenges",
+            label: "ፈተና",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book_rounded),
-            label: "Glossary",
+            label: "መፍቻ",
             backgroundColor: Color.fromRGBO(51, 53, 123, 1),
           ),
         ],

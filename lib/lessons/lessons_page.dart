@@ -16,11 +16,11 @@ class _LessonsPageState extends State<LessonsPage> {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(120), // Set this height
+          preferredSize: Size.fromHeight(100), // Set this height
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 50, 0, 0),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+              padding: const EdgeInsets.fromLTRB(60, 10, 0, 0),
               child: Container(
                 color: Colors.white,
                 child: Column(
@@ -34,14 +34,7 @@ class _LessonsPageState extends State<LessonsPage> {
                             style: DefaultTextStyle.of(context).style,
                             children: const <TextSpan>[
                               TextSpan(
-                                text: "ሰላም\n",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 53, 123, 0.7),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              TextSpan(
-                                text: "ትምህርት ጀምሪ!",
+                                text: "ትምህርት ይጀምሩ!",
                                 style: TextStyle(
                                   color: Color.fromRGBO(51, 53, 123, 0.7),
                                   fontSize: 35,
