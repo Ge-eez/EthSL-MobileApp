@@ -27,8 +27,17 @@ class ChallengeRepository {
       throw Exception(response.reasonPhrase);
     }
   }
-}
 
-class LessonRepository {
-  String baseUrl = '';
+  Future<void> completeChallenge() async {
+    final SecureStorage _secureStorage = SecureStorage();
+    String? token = await _secureStorage.getToken();
+    Response response = await get(
+      Uri.parse('${baseUrl}challenges'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+    );
+  }
 }

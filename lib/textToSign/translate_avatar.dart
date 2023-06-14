@@ -29,7 +29,7 @@ class TranslateAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     String js = '''
       const modelViewer = document.querySelector('#Home-Page-Greet');
-      const speeds = [1, 2, 0.5, -1];
+      const speeds = [1];
       const Names = $lis;
 
 
@@ -44,9 +44,9 @@ class TranslateAvatar extends StatelessWidget {
       const player = () => {
         const modelViewer = document.querySelector('#Home-Page-Greet');
         modelViewer.animationName = Names[j++%Names.length];
-        modelViewer.play({repetitions: 1});
+        modelViewer.play({repetitions: 0});
         t=modelViewer.duration;
-        t=t*1000/2 ;// because duration is in second and time to play and rewind//
+        t=t*2000/2 ;// because duration is in second and time to play and rewind//
         setTimeout(stop, t);
 
       };

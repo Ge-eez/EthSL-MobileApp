@@ -72,6 +72,7 @@ class inputFeild extends StatefulWidget {
 }
 
 class _inputFeildState extends State<inputFeild> {
+  final myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -99,6 +100,7 @@ class _inputFeildState extends State<inputFeild> {
                       onPressed: () {}),
                   Expanded(
                     child: TextField(
+                      controller: myController,
                       decoration: InputDecoration(
                           hintText: "Type Something...",
                           hintStyle:
@@ -113,8 +115,17 @@ class _inputFeildState extends State<inputFeild> {
           SizedBox(width: 12),
           InkWell(
             onTap: () {
+              List lst = [];
+              myController.text.runes.forEach((c) {
+                var ch = new String.fromCharCode(c);
+                lst.add(""" "${ch}" """);
+
+                //code
+              });
+              var temp = '${lst}';
+              temp;
               print("hello");
-              widget.callback('["Ha","Hu","He"]');
+              widget.callback(temp);
             },
             child: Container(
               padding: const EdgeInsets.fromLTRB(15.0, 15, 12, 15),

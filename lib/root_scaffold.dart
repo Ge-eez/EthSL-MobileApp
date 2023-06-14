@@ -2,6 +2,7 @@ import 'package:blink/practice/practice_page.dart';
 import 'package:flutter/material.dart';
 import 'challenges/challenges_page.dart';
 import 'glossary/glossary_page.dart';
+import 'lesson/lessons_page.dart';
 import 'mp_web_view/test_wv.dart';
 import 'pages.dart';
 
