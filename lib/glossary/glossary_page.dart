@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import 'gallary/gallery_page.dart';
+
 class GlossaryPage extends StatefulWidget {
   const GlossaryPage({super.key});
 
@@ -41,24 +43,6 @@ class _GlossaryPageState extends State<GlossaryPage> {
                     color: Color.fromRGBO(228, 228, 228, 1),
                   ),
                   child: Container(),
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: 80,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(26, 0, 26, 0),
-                child: SizedBox(
-                  width: 360,
-                  height: 55,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          Color.fromRGBO(51, 53, 123, 1), // Background color
-                    ),
-                    child: Text("Browse All Signs"),
-                  ),
                 ),
               ),
             ),
@@ -154,6 +138,30 @@ class _GlossaryPageState extends State<GlossaryPage> {
                     },
                   );
                 }).toList(),
+              ),
+            ),
+            Positioned(
+              bottom: 80,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(26, 0, 26, 0),
+                child: SizedBox(
+                  width: 360,
+                  height: 55,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GalleryPageView()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          Color.fromRGBO(51, 53, 123, 1), // Background color
+                    ),
+                    child: Text("Browse All Signs"),
+                  ),
+                ),
               ),
             ),
           ],
