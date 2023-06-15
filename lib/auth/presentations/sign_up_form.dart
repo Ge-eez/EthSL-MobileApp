@@ -156,7 +156,7 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       controller: phoneController,
                       // Add other TextFormField properties...
-                    )
+                    ),
 
 
                       BlocConsumer<SignUpBloc, SignUpState>(
