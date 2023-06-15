@@ -325,7 +325,7 @@ class _WebViewAppState extends State<WebViewApp> {
                   height: 130,
                   child: Center(
                     child: Image.asset(
-                      scale: 0.5,
+                      scale: 1,
                       "assets/PbU.gif",
                     ),
                   ),
