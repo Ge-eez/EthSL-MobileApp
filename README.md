@@ -1,16 +1,7 @@
-# blink
+# Blink
 
-A new Flutter project.
+An Ethiopian Sign language teaching and translation application with machine learning
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/Ge-eez/EthSL-MobileApp/assets/58773098/1b447b5f-21d7-41d3-b35c-de89b086ed82)
+![image](https://github.com/Ge-eez/EthSL-MobileApp/assets/58773098/22f28ffa-0ff0-453b-a954-283877bab6dc)
+![image](https://github.com/Ge-eez/EthSL-MobileApp/assets/58773098/93b672fd-4bae-48b7-97b0-1776cbc38cf7)
